@@ -1,0 +1,14 @@
+# O PROGRAMA DEVERÁ RECEBER COMO ENTRADAS O PREO UNITÁRIO DE UM PRODUTO E A QUANTIDADE COMPRADA E EM SEGUIDA VERIFICAR SE O CLIENTE TEM DIREITO A DESCONTO, CALCULANDO O NOVO VALOR EM CASO AFIRMATIVO. 
+
+# REGRAS PARA O DESCONTO: 8% DE DESCONTO QUANDO O VALOR FINAL DA COMPRA FOR SUPERIOR A 200 REAIS OU A QUANTIDADE COMPRADA FOR DE PELO MENOS 25 UNIDADES.
+
+valor = float(input('Preço:'))
+qtd = int(input('Quantidade comprada:'))
+
+total = valor * qtd
+
+if qtd >= 25 or valor > 200:
+    desconto = 0.08*total
+    total -= desconto
+
+print('Valor final da compra é R$ {:.2f}' .format(total))
